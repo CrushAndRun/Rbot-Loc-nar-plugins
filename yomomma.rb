@@ -1,0 +1,82 @@
+YOMOMMA = [
+     'yo momma so fat i tried to drive around her and ran out of gas',
+     'yo momma like a shot gun two cocks and she blows',
+     'yo momma so poor she eats cereal with a fork to save milk',
+     'yo momma so fat when she cut her leg shaving, gravy poured out',
+     'yo momma so lame if she was dead in the street next to a squirrel the only difference would be the skid marks leading up to the squirrel',
+     'yo momma so fat she\'s got to pull down her pants to get into her pockets',
+     'yo momma so broke she can\'t even spend the night',
+     'yo momma so poor i saw her kicking a can and asked what are you doing, she said..movin\'',
+     'yo momma so fat she got stuck in the grand canyon',
+     'yo momma is like a doorknob everyone gets a turn',
+     'yo momma so dried up she lactates powdered milk',
+     'yo momma so short she doesn\'t have legs she has feet growing out her ass',
+     'yo momma so fat she put on her lipstick with a paint roller',
+     'yo momma is like a rechargeable battery she gets used all night',
+     'yo momma so huge fuck the menu when she goes to a restaurant she gets an estimate',
+     'yo momma so dumb she can\'t even figure out how to help your broke ass dad get a blow job',
+     'yo momma face is like a nail it\'s been hammered hard',
+     'yo momma ass so wide it makes Oprah feel good about herself',
+     'yo momma so fat she goes to kentucky fried chicken to lick other people\'s fingers',
+     'yo momma so dumb she studied for a drug test',
+     'yo momma so short she\'s a teller at a piggy bank',
+     'yo momma so fat if she wears anything with an X helicopters land on her',
+     'yo momma like a Ford Pinto she blows after she gets banged in the rear',
+     'yo momma so hairy Bigfoot took a picture of HER',
+     'yo momma so short you can see her feet on her drivers license',
+     'yo momma so fat when she wears red she looks like the kool-aid man',
+     'yo momma so huge when she dances the band skips',
+     'yo momma so goth that van helsing thought she was a vampire and shot her',
+     'yo momma like a bowling ball.. she gets picked up fingered and thrown in the gutter',
+     'yo momma so poor burglars break in her house and leave money',
+     'yo momma like a hockey team...changes her pads every three periods',
+     'yo momma so dumb she bought a solar-powered flashlight',
+     'yo momma teeth so yellow when she closes her mouth her eyes light up',
+     'yo momma so poor she bounces food stamps',
+     'yo momma so butt ugly her pillow cries at night',
+     'yo momma so short that she has to carry around a sign that says, Dont Spit! I Cant Swim!',
+     'yo momma so poor she went to McDonald\'s and put a milkshake on layaway',
+     'yo momma so old when she was in school there was no history class',
+     'yo momma like a moped, everyone rides her but they wont admit it',
+     'yo momma teeth so gapped her front tooth says Next Tooth One Mile',
+     'yo momma like a turtle, once she\'s on her back she\'s fucked',
+     'yo momma so dumb she sold her car for gas money',
+     'yo momma so pitiful she can\'t even get laid by a monkey with a sack of bananas',
+     'yo momma so sad she called yo daddy a fag and he hit her with his purse',
+     'yo momma so nasty even her dildo turned her down',
+     'yo momma so fat that the housing bubble popped because she sat on it',
+     'yo momma so butt ugly yo daddy has to stick his dick in the freezer just to get it hard for her',
+     'yo momma so dumb she thought Fleetwood Mac was a new hamburger at McDonalds',
+     'yo momma house so dirty roaches ride around in 4X4s',
+     'yo momma so nasty a skunk smelled her butt and passed out',
+     'yo momma has a short leg and walks in circles',
+     'yo momma so hairy her armpits look like she has Don King in a headlock',
+     'yo momma teeth so crooked when she smiles her mouth looks like its throwin\' up gang signs',
+     'yo momma so poor she hangs the toilet paper out to dry',
+     'yo momma so pitiful Rice Krispies wont even Snap! Crackle! Pop! for her',
+     'yo momma so ugly the tide wont even take her out',
+     'yo momma so slutty her phone number is on the wall of all roach motels',
+     'yo momma so hairy I took her to the zoo guy at the gate said thanks for bringing her back',
+     'yo momma face so bashed in it looks like she ran the 100 yard dash in a 90 yard gym',
+     'yo momma so stupid she thinks Sirius Black is a hip hop station on satellite radio',
+     'yo momma so fat the Sorting Hat put her in all four houses',
+     'yo momma so stupid and fat she supported the bailout just because she wanted a barrel of pork',
+     'yo momma so huge ACORN registered her to vote eight times',
+     'yo momma so fat a recursive function computing her weight causes a stack overflow',
+     'yo momma butt so huge that THX can\'t even surround it',
+     'yo momma so slow she can be emulated on a 286',
+     'yo momma ass is so huge the NSA considered using it to block the internet',
+]
+
+class YoMomma < Plugin
+    def help(plugin, topic="")
+        "yomomma => random jokes about yo momma."
+    end
+
+    def yomomma(m, params)
+        m.reply YOMOMMA.pick_one
+    end
+end
+
+plugin = YoMomma.new
+plugin.map 'yomomma'

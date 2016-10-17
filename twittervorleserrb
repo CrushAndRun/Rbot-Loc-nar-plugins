@@ -1,0 +1,39 @@
+#-- vim:sw=2:et
+#++
+#
+# :title: TwitterVorleser Plugin
+#
+# Listens for twitter url and fetches content of tweets
+#
+# Author:: Patric Mueller <bhaak@gmx.net>
+#
+# Copyright:: (C) 2010 Patric Mueller
+#
+# License:: MIT license
+
+require 'nokogiri'
+require 'open-uri'
+
+class TwitterVorleserPlugin < Plugin
+
+  def get_twitter_content(status)
+    begin
+      tweet = Nokogiri::HTML(open("http://api.twitter.com/1/statuses/show/"+status+".xml"))
+      user = (tweet/"user/screen_name")[0].content
+      text = (tweet/"text")[0].content
+      return "#{user}: #{text}"
+    rescue => e
+      return e.message
+    end
+  end
+
+  def listen(m)
+    urls = m.message.split.select {|v| v =~ /^(http:\/\/twitter.com\/.*\/status\/.*)/}
+    urls.each {|u|
+      ret = get_twitter_content(/status\/(.*)/.match(u)[1])
+      m.reply ret if ret
+    }
+  end
+
+end
+plugin = TwitterVorleserPlugin.new
