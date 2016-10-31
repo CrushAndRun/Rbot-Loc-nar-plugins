@@ -450,7 +450,7 @@ class BARPlugin < Plugin
     when "help" then
       "suggests that #{nick} just enter /quit I'm helpless."
     when "sex" then
-      "tosses #{nick} a tube of hand lotion and recommends shuurl.com."
+      "tosses #{nick} a tube of hand lotion and recommends eroprofile.com."
     when "jokes" then
       "tosses a paperback copy of This Is Your Life to #{nick}."
     when "idiocy" then
