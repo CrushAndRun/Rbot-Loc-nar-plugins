@@ -10,8 +10,31 @@ class AutoTranslatePlugin < Plugin
   ## - dst_lang : translation language
   
 
-  TRANSLATIONS = [ {"src" => "#myfirstchannel", "dst" => "#myfirstchannelFr", "src_lang" => "en", "dst_lang" => "fr"},
-    		   {"src" => "#mysecondchannel", "dst" => "#mysecondchannelNo", "src_lang" => "en", "dst_lang" => "no"} ]
+  TRANSLATIONS = [ {"src" => "#cornerpocket", "dst" => "#cornerpocketEn", "src_lang" => "zh-CN", "dst_lang" => "en"},
+	           {"src" => "#cornerpocket", "dst" => "#cornerpocketEn", "src_lang" => "zh-TW", "dst_lang" => "en"},
+	           {"src" => "#cornerpocket", "dst" => "#cornerpocketEn", "src_lang" => "da", "dst_lang" => "en"},
+	           {"src" => "#cornerpocket", "dst" => "#cornerpocketEn", "src_lang" => "nl", "dst_lang" => "en"},
+	           {"src" => "#cornerpocket", "dst" => "#cornerpocketEn", "src_lang" => "tl", "dst_lang" => "en"},
+	           {"src" => "#cornerpocket", "dst" => "#cornerpocketEn", "src_lang" => "fi", "dst_lang" => "en"},
+	           {"src" => "#cornerpocket", "dst" => "#cornerpocketEn", "src_lang" => "fr", "dst_lang" => "en"},
+	           {"src" => "#cornerpocket", "dst" => "#cornerpocketEn", "src_lang" => "el", "dst_lang" => "en"},
+	           {"src" => "#cornerpocket", "dst" => "#cornerpocketEn", "src_lang" => "ga", "dst_lang" => "en"},
+	           {"src" => "#cornerpocket", "dst" => "#cornerpocketEn", "src_lang" => "it", "dst_lang" => "en"},
+	           {"src" => "#cornerpocket", "dst" => "#cornerpocketEn", "src_lang" => "ja", "dst_lang" => "en"},
+	           {"src" => "#cornerpocket", "dst" => "#cornerpocketEn", "src_lang" => "ko", "dst_lang" => "en"},
+	           {"src" => "#cornerpocket", "dst" => "#cornerpocketEn", "src_lang" => "la", "dst_lang" => "en"},
+	           {"src" => "#cornerpocket", "dst" => "#cornerpocketEn", "src_lang" => "ms", "dst_lang" => "en"},
+	           {"src" => "#cornerpocket", "dst" => "#cornerpocketEn", "src_lang" => "no", "dst_lang" => "en"},
+	           {"src" => "#cornerpocket", "dst" => "#cornerpocketEn", "src_lang" => "pl", "dst_lang" => "en"},
+	           {"src" => "#cornerpocket", "dst" => "#cornerpocketEn", "src_lang" => "pt", "dst_lang" => "en"},
+	           {"src" => "#cornerpocket", "dst" => "#cornerpocketEn", "src_lang" => "ro", "dst_lang" => "en"},
+	           {"src" => "#cornerpocket", "dst" => "#cornerpocketEn", "src_lang" => "ru", "dst_lang" => "en"},
+	           {"src" => "#cornerpocket", "dst" => "#cornerpocketEn", "src_lang" => "es", "dst_lang" => "en"},
+	           {"src" => "#cornerpocket", "dst" => "#cornerpocketEn", "src_lang" => "sv", "dst_lang" => "en"},
+	           {"src" => "#cornerpocket", "dst" => "#cornerpocketEn", "src_lang" => "th", "dst_lang" => "en"},
+	           {"src" => "#cornerpocket", "dst" => "#cornerpocketEn", "src_lang" => "tr", "dst_lang" => "en"},
+	           {"src" => "#cornerpocket", "dst" => "#cornerpocketEn", "src_lang" => "uk", "dst_lang" => "en"},
+    		   {"src" => "#cornerpocket", "dst" => "#cornerpocketEn", "src_lang" => "vi", "dst_lang" => "en"} ]
 
   ## IGNORE_NICKS contains a list of nicks whose messages must not be translated
 
@@ -46,7 +69,7 @@ class AutoTranslatePlugin < Plugin
    	answer = result["responseData"]["translatedText"]                  
 
    	if(answer.length > 600)
-      		@bot.say trans['dst'], "[Erreur] Réponse trop longue"
+      		@bot.say trans['dst'], "[Error] Response too long."
       		next
    	end
    	answer = answer.downcase
